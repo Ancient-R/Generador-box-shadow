@@ -8,6 +8,7 @@
   --color: #A29FA6;
   --acent-color-dark: #7C7C7C;
   --secondary-color: #47454D;
+  --transition: color 0.5s, background-color 0.6s ease-in-out;
 
 }
 
@@ -17,6 +18,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     background-color: var(--primary-color);
+    transition: var(--transition);
 }
 
 /* Estilos al container en App.js */
@@ -36,6 +38,42 @@ body {
   font-size: 1.5rem;
   color: var(--secondary-color);
 }
+
+.colors{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.colors__item{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.colors__item--principal{
+  background-color: #47454D;
+}
+
+.colors__item--two{
+  background-color: #4B738B;
+}
+
+.colors__item--three{
+  background-color: #DD3625;
+}
+
+.colors__item--four{
+  background-color: #FEAE0A;
+}
+
+
+.colors__item--five{
+  background-color: #5E485F;
+}
+
 
 /* Estilos del Generator.js */
 
@@ -65,6 +103,7 @@ body {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--acent-color);
+  color: var(--secondary-color);
 }
 
 .form__field{
