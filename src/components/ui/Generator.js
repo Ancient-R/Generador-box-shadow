@@ -83,7 +83,7 @@ const Generator = ({ figure, setFigure, formValues, setFormValues }) => {
                 <div className='form__field'>
                     <label className='form__label'>Color: </label>
                     <input 
-                        type="text"
+                        type="color"
                         className='form__input'
                         name='color'
                         value={color}
