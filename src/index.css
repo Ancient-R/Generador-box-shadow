@@ -102,8 +102,10 @@ body {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--acent-color);
+  border: 1px solid var(--secondary-color);
   color: var(--secondary-color);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .form__field{
