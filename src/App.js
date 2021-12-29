@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Header from "./components/header/Header";
 import Generator from "./components/ui/Generator";
@@ -17,14 +17,28 @@ function App() {
     y: '10',
     blur: '5',
     spreed: '0',
-    color: '#47454D'
+    color: '#000000'
   });
+
+  const { x, y, blur, spreed, color } = formValues;
+
+  // useRef para referenciar al container y aplicar estilos al hijo
+  const  figureRef = useRef();
+
+  useEffect( () => {
+    figureRef.current.children[1].style.boxShadow = `${x}px ${y}px ${blur}px ${spreed}px ${color}`
+
+    // eslint-disable-next-line
+  }, [ formValues, figure ]);
 
   return (
     <div className="App">
       <Header />
 
-      <div className="container">
+      <div 
+        className="container"
+        ref={ figureRef }
+      >
         <Generator 
           figure = { figure }
           setFigure={ setFigure }
