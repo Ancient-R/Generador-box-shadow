@@ -29,7 +29,7 @@ const Generator = ({ figure, setFigure, formValues, setFormValues }) => {
                     </select>
                 </div>
                 <div className='form__field'>
-                    <label className='form__label'>Sombra en X: </label>
+                    <label className='form__label'>Eje X: </label>
                     <input 
                         type="range"
                         className='form__input'
@@ -38,11 +38,17 @@ const Generator = ({ figure, setFigure, formValues, setFormValues }) => {
                         value={x}
                         onChange={ handleInputChange }
                     />
-                    <small className='input__value'>{x}px</small>
+                    <input 
+                        type="text" 
+                        value={x} 
+                        className='input__value'
+                        name='x'
+                        onChange={ handleInputChange}
+                    />
                 </div>
 
                 <div className='form__field'>
-                    <label className='form__label'>Sombra en Y: </label>
+                    <label className='form__label'>Eje Y: </label>
                     <input 
                         type="range"
                         className='form__input'
@@ -51,7 +57,13 @@ const Generator = ({ figure, setFigure, formValues, setFormValues }) => {
                         value={y}
                         onChange={ handleInputChange }
                     />
-                    <small className='input__value'>{y}px</small>
+                    <input 
+                        type="text" 
+                        value={y} 
+                        className='input__value'
+                        name='y'
+                        onChange={ handleInputChange}
+                    />
                 </div>
 
                 <div className='form__field'>
@@ -59,12 +71,18 @@ const Generator = ({ figure, setFigure, formValues, setFormValues }) => {
                     <input 
                         type="range"
                         className='form__input'
-                        min={-100}
+                        min={0}
                         name='blur'
                         value={blur}
                         onChange={ handleInputChange }
                     />
-                    <small className='input__value'>{blur}px</small>
+                    <input 
+                        type="text" 
+                        value={blur} 
+                        className='input__value'
+                        name='blur'
+                        onChange={ handleInputChange}
+                    />
                 </div>
 
                 <div className='form__field'>
@@ -72,12 +90,18 @@ const Generator = ({ figure, setFigure, formValues, setFormValues }) => {
                     <input 
                         type="range"
                         className='form__input'
-                        min={-100}
+                        min={-15}
                         name='spreed'
                         value={spreed}
                         onChange={ handleInputChange }
                     />
-                    <small className='input__value'>{spreed}px</small>
+                    <input 
+                        type="text" 
+                        value={spreed} 
+                        className='input__value'
+                        name='spreed'
+                        onChange={ handleInputChange}
+                    />
                 </div>
 
                 <div className='form__field'>
