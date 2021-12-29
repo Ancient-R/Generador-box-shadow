@@ -80,6 +80,10 @@ body {
   flex: 1;
 }
 
+.input__value{
+  color: var(--acent-color-dark);
+}
+
 
 /* Estilos del Rectangle.js */
 

@@ -20,7 +20,8 @@ const Generator = ({ figure, setFigure, formValues, setFormValues }) => {
                     <label className='form__label'>Figura: </label>
                     <select
                         className='form__input'
-                        value={ figure }                        onChange={ (e) => setFigure(e.target.value)}
+                        value={ figure }
+                        onChange={ (e) => setFigure(e.target.value)}
                     >
                         <option value="rectangle">Rectangulo</option>
                         <option value="square">Cuadrado</option>
@@ -37,6 +38,7 @@ const Generator = ({ figure, setFigure, formValues, setFormValues }) => {
                         value={x}
                         onChange={ handleInputChange }
                     />
+                    <small className='input__value'>{x}px</small>
                 </div>
 
                 <div className='form__field'>
@@ -49,6 +51,7 @@ const Generator = ({ figure, setFigure, formValues, setFormValues }) => {
                         value={y}
                         onChange={ handleInputChange }
                     />
+                    <small className='input__value'>{y}px</small>
                 </div>
 
                 <div className='form__field'>
@@ -61,6 +64,7 @@ const Generator = ({ figure, setFigure, formValues, setFormValues }) => {
                         value={blur}
                         onChange={ handleInputChange }
                     />
+                    <small className='input__value'>{blur}px</small>
                 </div>
 
                 <div className='form__field'>
@@ -73,6 +77,7 @@ const Generator = ({ figure, setFigure, formValues, setFormValues }) => {
                         value={spreed}
                         onChange={ handleInputChange }
                     />
+                    <small className='input__value'>{spreed}px</small>
                 </div>
 
                 <div className='form__field'>
