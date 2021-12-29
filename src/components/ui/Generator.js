@@ -11,6 +11,17 @@ const Generator = ({ figure, setFigure, formValues, setFormValues }) => {
         });
     }
 
+    // función para copiar código
+    const handleCopy = e => {
+        e.target.nextElementSibling.classList.add('code__copy--show','fadein');
+        
+        navigator.clipboard.writeText(e.target.previousElementSibling.textContent);
+
+        setTimeout(() => {
+            e.target.nextElementSibling.classList.remove('code__copy--show', 'fadein');
+        }, 3000);
+    }
+
     return (
         <div className='form__container'>
             <p className='form__title'>Opciones de sombra</p>
@@ -115,6 +126,15 @@ const Generator = ({ figure, setFigure, formValues, setFormValues }) => {
                     />
                 </div>
                 
+                <div className='code__container'>
+                    <p className='code__text'>box-shadow: {x}px {y}px {blur}px {spreed}px {color}</p>
+                    <i 
+                        className="far fa-copy code__icon"
+                        onClick={ handleCopy }
+                    ></i>
+
+                    <small className='code__copy'>Copiado</small>
+                </div>
             </form>
         </div>
     );
