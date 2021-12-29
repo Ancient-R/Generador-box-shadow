@@ -30,6 +30,13 @@ body {
   align-items: center;
 }
 
+/* Estilos al Header.js */
+.header{
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+}
+
 /* Estilos del Generator.js */
 
 .form__container{
