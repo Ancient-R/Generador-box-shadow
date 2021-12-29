@@ -19,6 +19,19 @@ body {
     background-color: var(--primary-color);
 }
 
+/* Estilos al container en App.js */
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /* background-color: var(--secondary-color); */
+  padding: 2rem;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Estilos del Generator.js */
 
 .form__container{
@@ -66,3 +79,24 @@ body {
   outline: none;
   flex: 1;
 }
+
+
+/* Estilos del Rectangle.js */
+
+.figure{
+  background-color: var(--secondary-color);
+  width: 250px;
+  height: 250px;
+}
+
+.figure--rectangle{
+  width: 300px;
+  height: 200px;
+}
+
+/* Estilos del Circle.js */
+.figure--circle{
+  border-radius: 50%;
+}
+
+/* Estilos del Square.js */
